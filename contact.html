@@ -9,42 +9,186 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  <!-- Added loading screen with animated rabbit icon -->
+  <div class="loading-screen">
+    <div class="loader">
+      <div class="rabbit-loader">
+        <i class="fa-solid fa-rabbit"></i>
+      </div>
+      <p>Loading adorable rabbits...</p>
+    </div>
+  </div>
+
+  <!-- Removed JavaScript script tag, using CSS-only theme system -->
+  <input type="checkbox" id="theme-toggle" class="theme-checkbox" aria-label="Toggle dark mode" />
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle navigation menu" />
+
   <header>
-    <h1><i class="fa-solid fa-rabbit"></i> What I Love</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
+    <div class="logo">
+      <svg class="rabbit-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18,10.5 C18,9.5 18.5,8.5 19,8 C19.5,7.5 20,7 20,6 C20,4.5 19,3 17,3 C15.5,3 14,4 13,5.5 C12.5,4.5 11.5,4 10.5,4 C9,4 8,5 8,6.5 C8,7.5 8.5,8.5 9,9 L9,10 C8,10.5 7,11.5 7,13 C7,15 8.5,17 11,17.5 C11,18.5 11,19.5 11,20 C11,20.5 11.5,21 12,21 C12.5,21 13,20.5 13,20 L13,17.5 C15.5,17 17,15 17,13 C17,11.5 16,10.5 15,10 L15,9 C16,9 17,10 18,10.5 Z"/>
+      </svg>
+      <h1>What I Love</h1>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">
+        <i class="fa-solid fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="about.html" class="nav-link">
+        <i class="fa-solid fa-heart"></i>
+        <span>Why Rabbits</span>
+      </a>
+      <a href="gallery.html" class="nav-link">
+        <i class="fa-solid fa-images"></i>
+        <span>My Collection</span>
+      </a>
+      <a href="contact.html" class="nav-link active">
+        <i class="fa-solid fa-comment"></i>
+        <span>Connect</span>
+      </a>
     </nav>
+    <div class="header-right">
+      <label for="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </label>
+      <label for="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+    </div>
   </header>
 
   <main>
-    <h2>Contact Me About Rabbits!</h2>
-    <form>
-      <label for="name">Name *</label>
-      <input type="text" id="name" required>
+    <div class="contact-hero">
+      <h2>Let's Connect</h2>
+      <p>Share your rabbit stories or just say hello - I'd love to hear from fellow bunny enthusiasts!</p>
+    </div>
 
-      <label for="age">Your Age</label>
-      <input type="number" id="age" min="1" max="120">
+    <div class="contact-container">
+      <form>
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" required placeholder="Enter your full name">
+        </div>
 
-      <label>Gender</label>
-      <input type="radio" id="male" name="gender"><label for="male">Male</label>
-      <input type="radio" id="female" name="gender"><label for="female">Female</label>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Age *</label>
+            <input type="number" id="age" required placeholder="25" min="1" max="120">
+          </div>
 
-      <label>What do you love about rabbits?</label>
-      <input type="checkbox" id="fluff"><label for="fluff">Their fluff</label>
-      <input type="checkbox" id="ears"><label for="ears">Their ears</label>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" required placeholder="abebe@gmail.com">
+          </div>
+        </div>
 
-      <label for="satisfaction">How much do you love rabbits?</label>
-      <input type="range" id="satisfaction" min="1" max="10">
+        <div class="form-group">
+          <label>Gender *</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="gender" value="male" required>
+              <span>Male</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="gender" value="female" required>
+              <span>Female</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="gender" value="other" required>
+              <span>Other</span>
+            </label>
+          </div>
+        </div>
 
-      <label for="message">Message *</label>
-      <textarea id="message" required></textarea>
+        <div class="form-group">
+          <label>I'm interested in:</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="share">
+              <span>Sharing rabbit stories</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="collaborate">
+              <span>Collaborating on rabbit content</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="tips">
+              <span>Getting rabbit care tips</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="chat">
+              <span>Just chatting about bunnies</span>
+            </label>
+          </div>
+        </div>
 
-      <button type="submit">Send 🐇</button>
-    </form>
+        <div class="form-group">
+          <label for="experience">Your Rabbit Experience</label>
+          <select id="experience">
+            <option value="">Select your experience level</option>
+            <option value="owner">I have rabbits</option>
+            <option value="enthusiast">I love rabbits</option>
+            <option value="learning">Learning about rabbits</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Added range input for satisfaction level -->
+        <div class="form-group">
+          <label for="satisfaction">How satisfied are you with rabbit content? *</label>
+          <div class="range-container">
+            <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5" required>
+            <span class="range-value" id="rangeValue">5</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" required placeholder="Tell me about your favorite rabbit moment or ask me anything..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">
+          <span>Send Message</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Connect With Me</h3>
+        <div class="info-card">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>ruhi98mek@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-clock"></i>
+          <div>
+            <h4>Response Time</h4>
+            <p>Usually within 24 hours<br>I'd love to chat!</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-heart"></i>
+          <div>
+            <h4>Community</h4>
+            <p>Join fellow rabbit lovers<br>Share your bunny tales</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <!-- Added external links with target="_blank" and proper titles -->
+          <a href="https://facebook.com" class="social-btn" target="_blank" title="Follow on Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://instagram.com" class="social-btn" target="_blank" title="Follow on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://twitter.com" class="social-btn" target="_blank" title="Follow on Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer>...</footer>
+
+  <footer>
+    <p>© 2025 What I Love <i class="fa-solid fa-heart"></i> | <a href="https://unsplash.com" target="_blank" title="Free stock photos">Photo Credits</a></p>
+  </footer>
 </body>
 </html>
