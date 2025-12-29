@@ -1,8 +1,5 @@
 @import "base.css";
 
-/* === INDEX PAGE SPECIFIC STYLES === */
-
-/* Updated background-image URL to reference the created PNG texture files */
 body {
   background-image: url("../images/texture-light.jpg");
   background-attachment: fixed;
@@ -30,7 +27,6 @@ body:has(#theme-toggle:checked) .hero {
   background: linear-gradient(135deg, #3a302a 0%, #2a1f1a 100%);
 }
 
-/* Added decorative pseudo-element for hero section */
 .hero::before {
   content: "";
   position: absolute;
@@ -50,7 +46,6 @@ body:has(#theme-toggle:checked) .hero {
   z-index: 2;
 }
 
-/* Paw print layout */
 .paw-print {
   position: relative;
   width: 550px;
@@ -225,7 +220,6 @@ body.dark-mode .paw-pad p {
   overflow: hidden;
 }
 
-/* Added pseudo-element for button hover effect animation */
 .cta-button::before {
   content: "";
   position: absolute;
@@ -268,7 +262,6 @@ body:has(#theme-toggle:checked) .cta-button:hover {
   transform: translateX(5px);
 }
 
-/* Hero sidebars */
 .hero-sidebar {
   position: absolute;
   display: flex;
@@ -334,7 +327,6 @@ body.dark-mode .social-link {
   transform: scale(1.1);
 }
 
-/* Features section */
 .features {
   max-width: 1200px;
   margin: 4rem auto;
@@ -358,7 +350,6 @@ body.dark-mode .features h3 {
   gap: 2rem;
 }
 
-/* Added styling for section with decorative elements using pseudo-elements */
 .feature-card::before {
   content: "";
   position: absolute;
@@ -455,7 +446,6 @@ body.dark-mode .feature-card p {
   animation-delay: 0.3s;
 }
 
-/* Steps section */
 .steps {
   max-width: 800px;
   margin: 4rem auto;
@@ -495,7 +485,6 @@ body.dark-mode .steps li {
   color: #b39a7a;
 }
 
-/* Responsive adjustments for index */
 @media screen and (max-width: 1024px) {
   .paw-print {
     width: 450px;

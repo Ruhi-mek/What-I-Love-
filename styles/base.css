@@ -1,6 +1,3 @@
-/* === UNIFIED BASE STYLES FOR ALL PAGES === */
-
-/* Root variables for consistent theming */
 :root {
   --color-primary: #d2691e;
   --color-primary-dark: #b8571c;
@@ -17,7 +14,6 @@
   --transition-speed: 0.3s;
 }
 
-/* Loading Screen */
 .loading-screen {
   position: fixed;
   top: 0;
@@ -102,7 +98,6 @@ body:has(#theme-toggle:checked) .loader p {
   }
 }
 
-/* Global reset and setup */
 * {
   margin: 0;
   padding: 0;
@@ -113,7 +108,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Theme switching animation using @keyframes for smooth transitions */
 @keyframes themeSwitchLight {
   0% {
     background-color: #2a2420;
@@ -145,7 +139,6 @@ body {
   transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Use :has() selector to apply dark mode styles when theme-toggle is checked */
 body:has(#theme-toggle:checked) {
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
@@ -156,7 +149,6 @@ body:not(:has(#theme-toggle:checked)) {
   animation: themeSwitchLight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-/* Typography */
 h1,
 h2,
 h3,
@@ -191,7 +183,6 @@ body:has(#theme-toggle:checked) a:hover {
   color: #ffb380;
 }
 
-/* === HEADER STYLES === */
 header {
   background-color: var(--color-bg-light);
   padding: 1.5rem 3rem;
@@ -207,7 +198,6 @@ header {
   transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Added pseudo-element styling for decorative elements */
 header::before {
   content: "";
   position: absolute;
@@ -253,7 +243,6 @@ header h1 {
   margin: 0;
 }
 
-/* Navigation menu */
 nav {
   display: flex;
   gap: 0.5rem;
@@ -276,7 +265,6 @@ nav {
   position: relative;
 }
 
-/* Added pseudo-element styling for navigation links with visual indicator */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -322,7 +310,6 @@ body:has(#theme-toggle:checked) .nav-link.active {
   background-color: #4a3f35;
 }
 
-/* Header right section */
 .header-right {
   display: flex;
   align-items: center;
@@ -372,7 +359,6 @@ body:has(#theme-toggle:checked) .menu-toggle {
   color: var(--color-accent);
 }
 
-/* Use :has() to style menu button and nav when menu-toggle is checked */
 #menu-toggle:checked ~ header .menu-toggle {
   background-color: var(--color-primary);
   color: white;
@@ -386,13 +372,11 @@ body:has(#theme-toggle:checked) #menu-toggle:checked ~ header .menu-toggle {
   max-height: 400px;
 }
 
-/* Theme and menu checkboxes hidden */
 .theme-checkbox,
 .menu-checkbox {
   display: none;
 }
 
-/* === FOOTER STYLES === */
 footer {
   text-align: center;
   padding: 2rem;
@@ -419,14 +403,12 @@ body:has(#theme-toggle:checked) footer a {
   color: var(--color-accent);
 }
 
-/* Added styling for external links with visual distinction */
 footer a[target="_blank"]::after {
   content: " ↗";
   font-size: 0.8em;
   margin-left: 3px;
 }
 
-/* === RESPONSIVE DESIGN === */
 @media screen and (max-width: 1024px) {
   header {
     padding: 1.2rem 2rem;
@@ -531,7 +513,6 @@ footer a[target="_blank"]::after {
   }
 }
 
-/* Added styling for section headings with decorative underline */
 main section h3::before {
   content: "";
   display: block;

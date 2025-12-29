@@ -1,7 +1,5 @@
 @import "base.css";
 
-/* === GALLERY PAGE SPECIFIC STYLES === */
-
 main {
   padding: 2rem;
   display: flex;
@@ -22,12 +20,10 @@ main {
   justify-content: center;
 }
 
-/* Hide radio buttons */
 .rabbit-radio {
   display: none;
 }
 
-/* Hide all showcase cards by default */
 .showcase-card {
   display: none;
   background-color: #f5ebe0;
@@ -58,7 +54,6 @@ body.dark-mode .showcase-card {
   }
 }
 
-/* Show card when radio is checked */
 #rabbit-1:checked ~ .showcase-card[data-rabbit="1"],
 #rabbit-2:checked ~ .showcase-card[data-rabbit="2"],
 #rabbit-3:checked ~ .showcase-card[data-rabbit="3"],
@@ -68,7 +63,6 @@ body.dark-mode .showcase-card {
   display: grid;
 }
 
-/* Detail items */
 .details-left,
 .details-right {
   display: flex;
@@ -142,7 +136,6 @@ body.dark-mode .detail-value {
   color: var(--color-accent);
 }
 
-/* Center content */
 .center-content {
   display: flex;
   flex-direction: column;
@@ -163,7 +156,6 @@ body.dark-mode .rabbit-title {
   color: var(--color-accent);
 }
 
-/* Image container */
 .image-container {
   position: relative;
   width: 100%;
@@ -205,7 +197,6 @@ body.dark-mode .image-container {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Description container */
 .description-container {
   background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(15px);
@@ -258,7 +249,6 @@ body.dark-mode .rabbit-description {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Enhanced styling for Learn More button in slider */
 .description-container .cta-button {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white;
@@ -284,7 +274,6 @@ body:has(#theme-toggle:checked) .description-container .cta-button {
   box-shadow: 0 4px 15px rgba(255, 148, 80, 0.4);
 }
 
-/* Add hover effect with scale and shadow animation */
 .description-container .cta-button:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 25px rgba(210, 105, 30, 0.5);
@@ -302,12 +291,10 @@ body:has(#theme-toggle:checked) .description-container .cta-button:hover {
   transform: translateX(3px);
 }
 
-/* Add active state animation */
 .description-container .cta-button:active {
   transform: translateY(-1px) scale(0.98);
 }
 
-/* Floating buttons */
 .floating-btn {
   position: absolute;
   width: 60px;
@@ -353,7 +340,6 @@ body.dark-mode .floating-btn {
   right: -30px;
 }
 
-/* Navigation controls */
 .navigation-controls {
   display: flex;
   justify-content: flex-end;
@@ -366,7 +352,6 @@ body.dark-mode .floating-btn {
   display: none;
 }
 
-/* Show navigation buttons based on current rabbit */
 #rabbit-2:checked ~ .navigation-controls label[for="rabbit-1"].prev-btn,
 #rabbit-3:checked ~ .navigation-controls label[for="rabbit-2"].prev-btn,
 #rabbit-4:checked ~ .navigation-controls label[for="rabbit-3"].prev-btn,

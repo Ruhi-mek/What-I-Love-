@@ -1,8 +1,5 @@
 @import "base.css";
 
-/* === ABOUT PAGE SPECIFIC STYLES === */
-
-/* using background-image property with URL for texture */
 body {
   background-image: url("../images/texture-light.jpg");
   background-attachment: fixed;
@@ -96,7 +93,6 @@ body.dark-mode .story-section p {
   color: #b39a7a;
 }
 
-/* Table styling */
 table {
   width: 100%;
   max-width: 900px;
@@ -277,7 +273,6 @@ body.dark-mode .mission-card p {
   color: #b39a7a;
 }
 
-/* Responsive for about page */
 @media screen and (max-width: 768px) {
   .about-hero {
     padding: 3rem 1.5rem;
