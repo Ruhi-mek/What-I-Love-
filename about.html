@@ -9,32 +9,132 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+    
+  <div class="loading-screen">
+    <div class="loader">
+      <div class="rabbit-loader">
+        <i class="fa-solid fa-rabbit"></i>
+      </div>
+      <p>Loading adorable rabbits...</p>
+    </div>
+  </div>
+
+  <input type="checkbox" id="theme-toggle" class="theme-checkbox" aria-label="Toggle dark mode" />
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle navigation menu" />
+
   <header>
-    <h1><i class="fa-solid fa-rabbit"></i> What I Love</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
+    <div class="logo">
+      <svg class="rabbit-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18,10.5 C18,9.5 18.5,8.5 19,8 C19.5,7.5 20,7 20,6 C20,4.5 19,3 17,3 C15.5,3 14,4 13,5.5 C12.5,4.5 11.5,4 10.5,4 C9,4 8,5 8,6.5 C8,7.5 8.5,8.5 9,9 L9,10 C8,10.5 7,11.5 7,13 C7,15 8.5,17 11,17.5 C11,18.5 11,19.5 11,20 C11,20.5 11.5,21 12,21 C12.5,21 13,20.5 13,20 L13,17.5 C15.5,17 17,15 17,13 C17,11.5 16,10.5 15,10 L15,9 C16,9 17,10 18,10.5 Z"/>
+      </svg>
+      <h1>What I Love</h1>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">
+        <i class="fa-solid fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="about.html" class="nav-link active">
+        <i class="fa-solid fa-heart"></i>
+        <span>Why Rabbits</span>
+      </a>
+      <a href="gallery.html" class="nav-link">
+        <i class="fa-solid fa-images"></i>
+        <span>My Collection</span>
+      </a>
+      <a href="contact.html" class="nav-link">
+        <i class="fa-solid fa-comment"></i>
+        <span>Connect</span>
+      </a>
     </nav>
+    <div class="header-right">
+      <label for="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </label>
+      <label for="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+    </div>
   </header>
 
   <main>
-    <h2>About My Passion for Rabbits</h2>
-    <p>Ever since I was a child, rabbits have fascinated me with their calm eyes and gentle hops...</p>
-    
-    <table>
-      <thead>
-        <tr><th>Rabbit Breed</th><th>Personality</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Holland Lop</td><td>Sweet & cuddly</td></tr>
-        <tr><td>Rex</td><td>Velvety fur, calm</td></tr>
-        <tr><td>Netherland Dwarf</td><td>Energetic & tiny</td></tr>
-      </tbody>
-    </table>
+    <div class="about-hero">
+      <h2>My Love for Rabbits</h2>
+      <p>A lifelong passion for these gentle, enchanting creatures</p>
+    </div>
+
+    <div class="about-content">
+      <section class="story-section">
+        <h3>My Journey</h3>
+        <p>Rabbits have been a source of joy and wonder in my life for as long as I can remember. From the moment I encountered my first bunny, I was captivated by their gentle nature, twitching noses, and the way they hop with such grace and purpose. Their soft fur, curious personalities, and the peaceful energy they bring have made them an irreplaceable part of my world.</p>
+        <p>This website is my tribute to these amazing creatures. Here, I share my favorite rabbit moments, the breeds that fascinate me most, and the countless ways these adorable animals have enriched my life. Every binky, every nose twitch, and every gentle cuddle reminds me why rabbits hold such a special place in my heart.</p>
+      </section>
+
+      <section class="breeds-section">
+        <h3>Rabbit Breeds I Adore</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Rabbit Breed</th>
+              <th>What I Love</th>
+              <th>Special Traits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Holland Lop</td>
+              <td>Sweet & cuddly</td>
+              <td>Floppy ears charm</td>
+            </tr>
+            <tr>
+              <td>Rex</td>
+              <td>Velvety soft fur</td>
+              <td>Plush coat texture</td>
+            </tr>
+            <tr>
+              <td>Netherland Dwarf</td>
+              <td>Tiny & energetic</td>
+              <td>Pocket-sized cuteness</td>
+            </tr>
+            <tr>
+              <td>Lionhead</td>
+              <td>Fluffy mane</td>
+              <td>Majestic appearance</td>
+            </tr>
+            <tr>
+              <td>Angora</td>
+              <td>Cloud-like fluff</td>
+              <td>Incredibly soft fur</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="mission-section">
+        <h3>What Rabbits Mean to Me</h3>
+        <div class="mission-grid">
+          <div class="mission-card">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h4>Pure Joy</h4>
+            <p>They bring happiness and laughter into every single day</p>
+          </div>
+          <div class="mission-card">
+            <i class="fa-solid fa-spa"></i>
+            <h4>Peaceful Presence</h4>
+            <p>Their calm energy creates a serene atmosphere wherever they are</p>
+          </div>
+          <div class="mission-card">
+            <i class="fa-solid fa-star"></i>
+            <h4>Endless Fascination</h4>
+            <p>Each rabbit has unique quirks that constantly amaze and delight me</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer>...</footer>    
+  <footer>
+    <p>© 2025 What I Love <i class="fa-solid fa-heart"></i> | <a href="https://unsplash.com" target="_blank" title="Free rabbit photos">Photo Credits</a></p>
+  </footer>
 </body>
 </html>
