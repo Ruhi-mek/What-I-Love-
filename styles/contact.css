@@ -1,6 +1,5 @@
 @import "base.css";
 
-/* === CONTACT PAGE SPECIFIC STYLES === */
 
 .contact-hero {
   background: linear-gradient(135deg, #f5ebe0 0%, #e6ccb2 100%);
@@ -44,7 +43,6 @@ body.dark-mode .contact-hero p {
   }
 }
 
-/* Contact container */
 .contact-container {
   max-width: 1400px;
   margin: 3rem auto;
@@ -54,7 +52,6 @@ body.dark-mode .contact-hero p {
   gap: 3rem;
 }
 
-/* Form styling */
 form {
   background-color: #f5ebe0;
   padding: 2.5rem;
@@ -135,7 +132,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 input[type="number"] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .radio-group {
@@ -354,7 +351,6 @@ body.dark-mode .submit-button:hover {
   transform: translateX(5px);
 }
 
-/* Contact info sidebar */
 .contact-info {
   background-color: #f5ebe0;
   padding: 2.5rem;
@@ -498,7 +494,7 @@ body.dark-mode .social-btn {
   transform: scale(1.1);
 }
 
-/* Responsive for contact page */
+
 @media screen and (max-width: 1024px) {
   .contact-container {
     grid-template-columns: 1fr;
