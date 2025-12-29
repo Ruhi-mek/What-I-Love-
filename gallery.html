@@ -9,24 +9,415 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  <!-- Added loading screen with animated rabbit icon -->
+  <div class="loading-screen">
+    <div class="loader">
+      <div class="rabbit-loader">
+        <i class="fa-solid fa-rabbit"></i>
+      </div>
+      <p>Loading adorable rabbits...</p>
+    </div>
+  </div>
+
+  <input type="checkbox" id="theme-toggle" class="theme-checkbox" aria-label="Toggle dark mode" />
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle navigation menu" />
+
   <header>
-    <h1><i class="fa-solid fa-rabbit"></i> What I Love</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
+    <div class="logo">
+      <svg class="rabbit-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18,10.5 C18,9.5 18.5,8.5 19,8 C19.5,7.5 20,7 20,6 C20,4.5 19,3 17,3 C15.5,3 14,4 13,5.5 C12.5,4.5 11.5,4 10.5,4 C9,4 8,5 8,6.5 C8,7.5 8.5,8.5 9,9 L9,10 C8,10.5 7,11.5 7,13 C7,15 8.5,17 11,17.5 C11,18.5 11,19.5 11,20 C11,20.5 11.5,21 12,21 C12.5,21 13,20.5 13,20 L13,17.5 C15.5,17 17,15 17,13 C17,11.5 16,10.5 15,10 L15,9 C16,9 17,10 18,10.5 Z"/>
+      </svg>
+      <h1>What I Love</h1>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">
+        <i class="fa-solid fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="about.html" class="nav-link">
+        <i class="fa-solid fa-heart"></i>
+        <span>Why Rabbits</span>
+      </a>
+      <a href="gallery.html" class="nav-link active">
+        <i class="fa-solid fa-images"></i>
+        <span>My Collection</span>
+      </a>
+      <a href="contact.html" class="nav-link">
+        <i class="fa-solid fa-comment"></i>
+        <span>Connect</span>
+      </a>
     </nav>
+    <div class="header-right">
+      <label for="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </label>
+      <label for="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+    </div>
   </header>
 
   <main>
-    <h2>Rabbit Gallery</h2>
-    <div class="gallery">
-      <img src="images/rabbit1.jpg" alt="Fluffy rabbit">
-      <img src="images/rabbit2.jpg" alt="Rabbit eating carrot">
-      <img src="images/rabbit3.jpg" alt="Sleeping bunny">
+    <div class="showcase-container">
+      <input type="radio" name="rabbit-slider" id="rabbit-1" class="rabbit-radio" checked />
+      <input type="radio" name="rabbit-slider" id="rabbit-2" class="rabbit-radio" />
+      <input type="radio" name="rabbit-slider" id="rabbit-3" class="rabbit-radio" />
+      <input type="radio" name="rabbit-slider" id="rabbit-4" class="rabbit-radio" />
+      <input type="radio" name="rabbit-slider" id="rabbit-5" class="rabbit-radio" />
+      <input type="radio" name="rabbit-slider" id="rabbit-6" class="rabbit-radio" />
+
+      <!-- Rabbit 1: Brownie -->
+      <div class="showcase-card" data-rabbit="1">
+        <button class="floating-btn floating-btn-left" aria-label="Favorite">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+        <button class="floating-btn floating-btn-right" aria-label="Share">
+          <i class="fa-solid fa-paw"></i>
+        </button>
+
+        <div class="details-left">
+          <div class="detail-item">
+            <span class="detail-label">Name</span>
+            <span class="detail-value">Brownie</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Breed</span>
+            <span class="detail-value">Holland Lop</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Age</span>
+            <span class="detail-value">2 years</span>
+          </div>
+        </div>
+
+        <div class="center-content">
+          <h2 class="rabbit-title">Brownie</h2>
+          <div class="image-container">
+            <img src="images/rabbit-gallery-1.jpg" alt="Brownie the Holland Lop" class="rabbit-image">
+          </div>
+          
+          <div class="description-container">
+            <p class="rabbit-description">
+              Brownie is the sweetest Holland Lop with the softest fur and the most adorable floppy ears. She loves to hop around the garden and munch on fresh greens.
+            </p>
+            <button class="cta-button">
+              Learn More
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="details-right">
+          <div class="detail-item">
+            <span class="detail-label">Color</span>
+            <span class="detail-value">Brown & White</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Personality</span>
+            <span class="detail-value">Gentle</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Weight</span>
+            <span class="detail-value">3.5 pounds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rabbit 2: Pepper -->
+      <div class="showcase-card" data-rabbit="2">
+        <button class="floating-btn floating-btn-left" aria-label="Favorite">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+        <button class="floating-btn floating-btn-right" aria-label="Share">
+          <i class="fa-solid fa-paw"></i>
+        </button>
+
+        <div class="details-left">
+          <div class="detail-item">
+            <span class="detail-label">Name</span>
+            <span class="detail-value">Pepper</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Breed</span>
+            <span class="detail-value">Netherland Dwarf</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Age</span>
+            <span class="detail-value">1 year</span>
+          </div>
+        </div>
+
+        <div class="center-content">
+          <h2 class="rabbit-title">Pepper</h2>
+          <div class="image-container">
+            <img src="images/rabbit-gallery-2.jpg" alt="Pepper the Netherland Dwarf" class="rabbit-image">
+          </div>
+          
+          <div class="description-container">
+            <p class="rabbit-description">
+              Pepper is a tiny ball of energy who loves to explore and play. Despite her small size, she has a big personality and brings joy wherever she hops.
+            </p>
+            <button class="cta-button">
+              Learn More
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="details-right">
+          <div class="detail-item">
+            <span class="detail-label">Color</span>
+            <span class="detail-value">Gray</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Personality</span>
+            <span class="detail-value">Energetic</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Weight</span>
+            <span class="detail-value">2 pounds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rabbit 3: Mocha -->
+      <div class="showcase-card" data-rabbit="3">
+        <button class="floating-btn floating-btn-left" aria-label="Favorite">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+        <button class="floating-btn floating-btn-right" aria-label="Share">
+          <i class="fa-solid fa-paw"></i>
+        </button>
+
+        <div class="details-left">
+          <div class="detail-item">
+            <span class="detail-label">Name</span>
+            <span class="detail-value">Mocha</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Breed</span>
+            <span class="detail-value">Rex</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Age</span>
+            <span class="detail-value">3 years</span>
+          </div>
+        </div>
+
+        <div class="center-content">
+          <h2 class="rabbit-title">Mocha</h2>
+          <div class="image-container">
+            <img src="images/rabbit-gallery-3.jpg" alt="Mocha the Rex" class="rabbit-image">
+          </div>
+          
+          <div class="description-container">
+            <p class="rabbit-description">
+              Mocha has the most luxurious velvet-like fur that everyone loves to pet. She's laid-back and enjoys relaxing in the sun and receiving gentle head scratches.
+            </p>
+            <button class="cta-button">
+              Learn More
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="details-right">
+          <div class="detail-item">
+            <span class="detail-label">Color</span>
+            <span class="detail-value">Chocolate</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Personality</span>
+            <span class="detail-value">Calm</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Weight</span>
+            <span class="detail-value">8 pounds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rabbit 4: Oreo -->
+      <div class="showcase-card" data-rabbit="4">
+        <button class="floating-btn floating-btn-left" aria-label="Favorite">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+        <button class="floating-btn floating-btn-right" aria-label="Share">
+          <i class="fa-solid fa-paw"></i>
+        </button>
+
+        <div class="details-left">
+          <div class="detail-item">
+            <span class="detail-label">Name</span>
+            <span class="detail-value">Oreo</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Breed</span>
+            <span class="detail-value">Dutch</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Age</span>
+            <span class="detail-value">1.5 years</span>
+          </div>
+        </div>
+
+        <div class="center-content">
+          <h2 class="rabbit-title">Oreo</h2>
+          <div class="image-container">
+            <img src="images/rabbit-gallery-4.jpg" alt="Oreo the Dutch" class="rabbit-image">
+          </div>
+          
+          <div class="description-container">
+            <p class="rabbit-description">
+              Oreo's distinctive black and white markings make her instantly recognizable. She's always ready for playtime and loves learning new tricks for treats.
+            </p>
+            <button class="cta-button">
+              Learn More
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="details-right">
+          <div class="detail-item">
+            <span class="detail-label">Color</span>
+            <span class="detail-value">Black & White</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Personality</span>
+            <span class="detail-value">Playful</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Weight</span>
+            <span class="detail-value">4 pounds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rabbit 5: Leo -->
+      <div class="showcase-card" data-rabbit="5">
+        <button class="floating-btn floating-btn-left" aria-label="Favorite">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+        <button class="floating-btn floating-btn-right" aria-label="Share">
+          <i class="fa-solid fa-paw"></i>
+        </button>
+
+        <div class="details-left">
+          <div class="detail-item">
+            <span class="detail-label">Name</span>
+            <span class="detail-value">Leo</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Breed</span>
+            <span class="detail-value">Lionhead</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Age</span>
+            <span class="detail-value">2.5 years</span>
+          </div>
+        </div>
+
+        <div class="center-content">
+          <h2 class="rabbit-title">Leo</h2>
+          <div class="image-container">
+            <img src="images/rabbit-gallery-5.jpg" alt="Leo the Lionhead" class="rabbit-image">
+          </div>
+          
+          <div class="description-container">
+            <p class="rabbit-description">
+              Leo's magnificent mane gives him a regal appearance. He's confident and loves being the center of attention, strutting around like the king he is.
+            </p>
+            <button class="cta-button">
+              Learn More
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="details-right">
+          <div class="detail-item">
+            <span class="detail-label">Color</span>
+            <span class="detail-value">Golden</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Personality</span>
+            <span class="detail-value">Majestic</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Weight</span>
+            <span class="detail-value">3 pounds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rabbit 6: Clover -->
+      <div class="showcase-card" data-rabbit="6">
+        <button class="floating-btn floating-btn-left" aria-label="Favorite">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+        <button class="floating-btn floating-btn-right" aria-label="Share">
+          <i class="fa-solid fa-paw"></i>
+        </button>
+
+        <div class="details-left">
+          <div class="detail-item">
+            <span class="detail-label">Name</span>
+            <span class="detail-value">Clover</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Breed</span>
+            <span class="detail-value">Mini Lop</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Age</span>
+            <span class="detail-value">2 years</span>
+          </div>
+        </div>
+
+        <div class="center-content">
+          <h2 class="rabbit-title">Clover</h2>
+          <div class="image-container">
+            <img src="images/rabbit-gallery-6.jpg" alt="Clover the Mini Lop" class="rabbit-image">
+          </div>
+          
+          <div class="description-container">
+            <p class="rabbit-description">
+              Clover is incredibly affectionate and loves cuddle time. She has the softest temperament and gets along wonderfully with everyone she meets.
+            </p>
+            <button class="cta-button">
+              Learn More
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="details-right">
+          <div class="detail-item">
+            <span class="detail-label">Color</span>
+            <span class="detail-value">Cream</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Personality</span>
+            <span class="detail-value">Sweet</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Weight</span>
+            <span class="detail-value">5 pounds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Using label-based navigation buttons -->
+      <div class="navigation-controls">
+        <label for="rabbit-6" class="nav-btn prev-btn">PREV</label>
+        <label for="rabbit-2" class="nav-btn next-btn">NEXT</label>
+      </div>
     </div>
   </main>
-  <footer>...</footer>
+
+  <footer>
+    <p>© 2025 What I Love <i class="fa-solid fa-heart"></i> | <a href="https://unsplash.com" target="_blank" title="Free rabbit photos">Photo Credits</a></p>
+  </footer>
 </body>
 </html>
